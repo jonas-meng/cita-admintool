@@ -6,3 +6,5 @@ authors = ["xuming"]
 [dependencies]
 rand = "0.4.2"
 secp256k1-plus = "0.5.7"
+bitcoin = "0.11.0"
+rust-crypto = "0.2.36"
