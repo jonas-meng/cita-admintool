@@ -9,9 +9,9 @@ use crypto::sha3::Sha3;
 use crypto::digest::Digest;
 
 pub struct Keypair {
-    privkey: String, // 32-byte
-    pubkey: String, // 64-byte
-    address: String, // 20-byte
+    pub privkey: String, // 32-byte
+    pub pubkey: String, // 64-byte
+    pub address: String, // 20-byte
 }
 
 impl Keypair {
@@ -29,7 +29,6 @@ impl Keypair {
         println!("PUBLIC KEY ({} BYTES): {}", self.pubkey.len()/2, self.pubkey);
         println!("ADDRESS ({} BYTES): {}", self.address.len()/2, self.address);
     }
-    
 }
 
 fn generate_address(pk: PublicKey, the_secp256k1: &Secp256k1) -> String {
